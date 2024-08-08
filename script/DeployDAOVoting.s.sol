@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Script.sol";
-import "../src/Counter.sol";
+import "../src/DeployDAOVoting.sol";
 
 contract DeployDAOVoting is Script {
     function run() public {

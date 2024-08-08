@@ -33,6 +33,20 @@ forge test
 
 ## Publish
 
+Clean Artifacts
+
 ```bash
-forge script --chain sepolia script/DeployDAOVoting.s.sol:DeployDAOVoting --rpc-url $SEPOLIA_RPC_URL --broadcast --verify -vvvv
+rm -rf cache out
+```
+
+Deploy and Verify
+
+```bash
+source .env && forge script --chain sepolia script/DeployDAOVoting.s.sol:DeployDAOVoting --rpc-url $SEPOLIA_RPC_URL --broadcast --verify --verifier blockscout --verifier-url https://eth-sepolia.blockscout.com/api -vvvv
+```
+
+## Verify
+
+```bash
+forge verify-contract <address> SomeContract --watch
 ```
