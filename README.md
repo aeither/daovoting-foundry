@@ -39,6 +39,12 @@ Clean Artifacts
 rm -rf cache out
 ```
 
+Deploy
+
+```bash
+source .env && forge script --chain sepolia script/DeployDailyNotesLog.s.sol:DeployDailyNotesLog --rpc-url $SEPOLIA_RPC_URL --broadcast -vvvv
+```
+
 Deploy and Verify
 
 ```bash
@@ -46,6 +52,10 @@ source .env && forge script --chain sepolia script/DeployDAOVoting.s.sol:DeployD
 ```
 
 ## Verify
+
+```bash
+https://eth-sepolia.blockscout.com/address/<address>/
+```
 
 ```bash
 forge verify-contract <address> SomeContract --watch
